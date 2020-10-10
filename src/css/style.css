@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Shabnam';
+    src: local('Shabnam'), url(./Shabnam.ttf) format('truetype');
+}
+
+.tx-color {
+    background-color: #c5dedd;
+}
+
+.mybgcol {
+    background-color: #fff1e6;
+}
+
+
+.myFont {
+    font-family: Shabnam;
+}

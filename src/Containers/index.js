@@ -1,21 +1,22 @@
 import React from 'react';
-import instagram_logo from '../statics/instagram_logo.png';
-import { Card } from 'react-bootstrap';
+
+import { CardColumns, Container } from 'react-bootstrap';
+
+import MyCard from '../Components/MyCard';
+import Banner from '../Components/Banner';
 
 class Index extends React.Component {
     render(){
         return (
-            <div className='ui container'>
-                <div>introduce</div>
-                <div>
-                    <Card style={{width : '20%', height: '30%'}}>
-                        <Card.Body style={{margin: 'auto'}}>
-                            <Card.Img src={instagram_logo} alt='intagram' />
-                            <Card.Title className='alg-center'>اینستاگرام</Card.Title>
-                        </Card.Body>
-                    </Card>
-                    <div className='column center aligned'>service 2</div>
-                </div>
+            <div>
+                <Banner />
+                <Container fluid className='my-5'>
+                    <CardColumns className = 'mx-xl-3 mx-md-2 mx-sm-2'>
+                        <MyCard />
+                        <MyCard />
+                        <MyCard />
+                    </CardColumns>
+                </Container>
                 <div>porfolio</div>
                 <div>about</div>
             </div>

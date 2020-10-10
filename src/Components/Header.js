@@ -1,24 +1,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
-import { NavDropdown,Nav } from 'react-bootstrap';
+import Nav from 'react-bootstrap/Nav';
+import '../css/style.css';
 
 
 
 const Header = () => {
     return (
         <div>
-            <Navbar bg='light gray'>
-                <Nav>
-                    <Nav.Link className="rounded mx-2 bg-secondary" as={Link}  to="/login" >ورود</Nav.Link>
-                    <Nav.Link className="rounded mx-2 bg-secondary" as={Link} to="/about" >درباره ما</Nav.Link>
-                    <NavDropdown title='خدمات' as={Link} to="/services" className="rounded mx-2 bg-secondary">
-                        <NavDropdown.Item as={Link} className="rounded mx-2 bg-secondary" to="/instagram">اینستاگرام</NavDropdown.Item>
-                        <NavDropdown.Item as={Link} className="rounded mx-2 bg-secondary" to="/copywriting">کپی رایتینگ</NavDropdown.Item>
-                        <NavDropdown.Item as={Link} className="rounded mx-2 bg-secondary" to="/seo">سئو</NavDropdown.Item>
-                    </NavDropdown>
-                    <Nav.Link variant='info alert' as={Link} to="/">خانه</Nav.Link>
+            <Navbar className='mybgcol' expand='md' fixed="top">
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className='justify-content-between text-right'>
+                    <Nav.Item>
+                        <Nav.Link className="rounded mx-lg-1 tx-color" as={Link}  to="/login" >ورود</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link className="rounded mx-lg-1 tx-color" as={Link} to="/about" >درباره ما</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link className="rounded mx-lg-1 tx-color" as={Link} to="/services">خدمات</Nav.Link>
+                    </Nav.Item>
                 </Nav>
+                <Nav className='text-right mr-md-auto'>
+                    <Nav.Item >
+                        <Nav.Link className='tx-color rounded mx-lg-1' as={Link} to="/">خانه</Nav.Link>
+                    </Nav.Item>
+                </Nav>
+                </Navbar.Collapse>
             </Navbar>
         </div>
     )

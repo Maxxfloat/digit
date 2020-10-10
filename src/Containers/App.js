@@ -5,10 +5,12 @@ import Header from '../Components/Header';
 import Routes from '../Components/Routes';
 import Footer from '../Components/Footer';
 
+import '../css/style.css'
+
 class App extends React.Component {
     render(){
         return(
-            <div>
+            <div className='myFont'>
                 <BrowserRouter>
                     <Header />
                     <Routes />
