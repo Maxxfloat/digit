@@ -2,17 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import '../css/style.css';
+import './css/style.css';
 
 
 
 const Header = () => {
     return (
         <div>
-            <Navbar className='mybgcol' expand='md' fixed="top">
+            <Navbar className='mybgcol' expand='md' fixed="top" style={{margin : '0'}}>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className='justify-content-between text-right'>
+                <Nav className='justify-content-between text-right' style={{margin : '0'}}>
                     <Nav.Item>
                         <Nav.Link className="rounded mx-lg-1 tx-color" as={Link}  to="/login" >ورود</Nav.Link>
                     </Nav.Item>

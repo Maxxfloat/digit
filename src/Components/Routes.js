@@ -1,12 +1,12 @@
 import React from "react";
 import { Switch , Route } from 'react-router-dom'
 
-import index from '../Containers'
-import Login from '../Components/Login';
-import Registry from '../Components/Registry';
-import Instagram from '../Components/Services/Instagram'
-import Copywriting from '../Components/Services/Copywriting'
-import Seo from '../Components/Services/Seo'
+import index from './Containers'
+import Login from './Login';
+import Registry from './Registry';
+import Instagram from './Services/Instagram'
+import Copywriting from './Services/Copywriting'
+import Seo from './Services/Seo'
 import Services from "./Services";
 
 
