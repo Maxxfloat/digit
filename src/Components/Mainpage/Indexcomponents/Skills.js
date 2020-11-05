@@ -6,16 +6,14 @@ const Skills = () => {
     return (
         <section>
             <Container fluid>
-                <Row>
-                    <div className='col-xl-12'>
-                        مهارت ها
-                    </div>
-                </Row>
-                <Row>
-                    <Container className='col-xl-4'>اینستاگرام</Container>
-                    <Container className='col-xl-4'>سئو</Container>
-                    <Container className='col-xl-4'>کپی رایتینگ</Container>
-                </Row>
+                    <Row className='justify-content-center align-items-center vh-100'>
+                        <div className='col-xl-12 text-center'>
+                            مهارت ها
+                        </div>
+                        <div className='col-xl-4 text-center'>اینستاگرام</div>
+                        <div className='col-xl-4 text-center'>سئو</div>
+                        <div className='col-xl-4 text-center'>کپی رایتینگ</div>
+                    </Row>
             </Container>
         </section>
     )

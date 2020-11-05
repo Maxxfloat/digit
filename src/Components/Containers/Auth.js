@@ -1,8 +1,7 @@
 import React from 'react';
-import {Route} from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import Input from '../UI/Input'
+import Input from '../UI/Input';
 import axios from 'axios';
 
 class Auth extends React.Component {
@@ -92,13 +91,6 @@ class Auth extends React.Component {
         }
     };
 
-    checkValidity = (value, rules) => {
-        let isValid = false;
-
-        if (rules.required) {
-            isValid = value.trim() !== '';
-        }
-    }
 
     inputChangedHandler = (event , inputIdentifier) => {
         const updatedSignupForm = {
@@ -158,9 +150,6 @@ class Auth extends React.Component {
         )
     }
 }
-const mapStateToProps = (state) => {
-    
-};
 
 const mapDispatchToProps = () => {
     return {
@@ -168,4 +157,4 @@ const mapDispatchToProps = () => {
     }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Auth);
+export default connect(null,mapDispatchToProps)(Auth);

@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'B_Nazanin';
+    src: local('B_Nazanin') , url('../src/Components/Assets/fonts/B\ Nazanin\ Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family : 'B_Mitra';
+    src : local('B_Mitra'), url('../src/Components/Assets/fonts/B_Mitra.ttf') format('truetype')
+}
+
+body {
+    font-family: B_Nazanin;
+}

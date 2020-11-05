@@ -2,35 +2,54 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import {connect} from 'react-redux';
 
 
 
 
-const Header = ({signUp}) => {
-    const signUpHandler = (signUp) =>{
-        if (signUp) {
+const Header = ({isAuth}) => {
+    const signUpHandler = () =>{
+        if (isAuth) {
             return <img alt='profile' />
         }else{
             return (
             <Nav>
-                <Nav.Link as={Link} to='/signup' >عضویت / ورود</Nav.Link>
+                <Link className='nav-item nav-link btn' style={{backgroundColor : 'lightcyan'}} to='/signup' >عضویت / ورود</Link>
             </Nav>
             )
         }
     }
+    
     return (
         <>
-            <Navbar>
+            <Navbar expand='lg' className='bg-warning'>
                 <Navbar.Toggle aria-controls='my-nav'/>
-                <Navbar.Collapse id='my-nav'/>
+                <Navbar.Collapse id='my-nav' className='text-right'>
                 <Nav>
-                    <Nav.Link as={Link} to='/' >خدمات</Nav.Link>
-                    <Nav.Link as={Link} to='/' >درباره ما</Nav.Link>
-                    {signUpHandler(signUp)}
+                    <Link className='nav-item nav-link mr-1 btn' style={{backgroundColor : 'lightcyan'}} to='/' >خدمات</Link>
+                    <Link className='nav-item nav-link mr-1 btn' style={{backgroundColor : 'lightcyan'}} to='/' >درباره ما</Link>
+                    <Link to='/signup' className='nav-item nav-link mr-1 btn' style={{backgroundColor : 'lightcyan'}} >ALAKI</Link>
                 </Nav>
+                <Nav className='mr-auto'>
+                    {signUpHandler()}
+                </Nav>
+                </Navbar.Collapse>
             </Navbar>
         </>
     )
 }
 
-export default Header;
+const mapStateToProps = (state) => {
+    return {
+        isAuth : state.isAuth
+    }
+}
+
+const mapDispatchToProps = (Dispatch) => {
+    return {
+        didAuth : () => Dispatch({type : 'DID_AUTH'}),
+        didNotAuth : () => Dispatch({type : 'DID_NOT_AUTH'})
+    }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Header);
