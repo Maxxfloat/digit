@@ -5,8 +5,6 @@ import Nav from 'react-bootstrap/Nav';
 import {connect} from 'react-redux';
 
 
-
-
 const Header = ({isAuth}) => {
     const signUpHandler = () =>{
         if (isAuth) {
@@ -14,7 +12,8 @@ const Header = ({isAuth}) => {
         }else{
             return (
             <Nav>
-                <Link className='nav-item nav-link btn' style={{backgroundColor : 'lightcyan'}} to='/signup' >عضویت / ورود</Link>
+                <Link className='nav-item nav-link rounded' 
+                style={{backgroundColor : 'lightcyan'}} to='/signup'>عضویت / ورود</Link>
             </Nav>
             )
         }
@@ -26,9 +25,9 @@ const Header = ({isAuth}) => {
                 <Navbar.Toggle aria-controls='my-nav'/>
                 <Navbar.Collapse id='my-nav' className='text-right'>
                 <Nav>
-                    <Link className='nav-item nav-link mr-1 btn' style={{backgroundColor : 'lightcyan'}} to='/' >خدمات</Link>
-                    <Link className='nav-item nav-link mr-1 btn' style={{backgroundColor : 'lightcyan'}} to='/' >درباره ما</Link>
-                    <Link to='/signup' className='nav-item nav-link mr-1 btn' style={{backgroundColor : 'lightcyan'}} >ALAKI</Link>
+                    <Link className='nav-item nav-link mr-1 rounded' style={{backgroundColor : 'lightcyan'}} to='/' >خانه</Link>
+                    <Link className='nav-item nav-link mr-1 rounded' style={{backgroundColor : 'lightcyan'}} to='/' >خدمات</Link>
+                    <Link className='nav-item nav-link mr-1 rounded' style={{backgroundColor : 'lightcyan'}} to='/' >درباره ما</Link>
                 </Nav>
                 <Nav className='mr-auto'>
                     {signUpHandler()}
