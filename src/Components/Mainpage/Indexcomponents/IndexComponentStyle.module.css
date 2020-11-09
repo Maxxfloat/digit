@@ -4,4 +4,11 @@
     -webkit-text-fill-color: transparent;
 }
 
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .height {
+      height : 700px;
+    }
+  }
+
 /* -webkit-background-clip: text; */

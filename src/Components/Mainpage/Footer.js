@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <section>
+        <footer className=''>
             <div className='container-fluid bg-secondary '>
                 <div className='row text-center align-items-center justify-content-center py-5'>
                     <h1 className='col-12 text-white'>نمی‌دونم چی بنویسم</h1>
@@ -18,7 +18,7 @@ const Footer = () => {
                     <p className='col-12 text-right text-white align-self-end'>&copy; کپی رایت ۲۰۲۰ - طراح امید نشاطی</p>
                 </div>
             </div>
-        </section>
+        </footer>
     )
 }
 

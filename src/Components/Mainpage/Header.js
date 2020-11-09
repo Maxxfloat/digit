@@ -12,7 +12,7 @@ const Header = ({isAuth}) => {
         }else{
             return (
             <Nav>
-                <Link className='nav-item nav-link rounded' 
+                <Link className='nav-item nav-link rounded mr-1 px-2' 
                 style={{backgroundColor : 'lightcyan'}} to='/signup'>عضویت / ورود</Link>
             </Nav>
             )
@@ -25,11 +25,11 @@ const Header = ({isAuth}) => {
                 <Navbar.Toggle aria-controls='my-nav'/>
                 <Navbar.Collapse id='my-nav' className='text-right'>
                 <Nav>
-                    <Link className='nav-item nav-link mr-1 rounded' style={{backgroundColor : 'lightcyan'}} to='/' >خانه</Link>
-                    <Link className='nav-item nav-link mr-1 rounded' style={{backgroundColor : 'lightcyan'}} to='/' >خدمات</Link>
-                    <Link className='nav-item nav-link mr-1 rounded' style={{backgroundColor : 'lightcyan'}} to='/' >درباره ما</Link>
+                    <Link className='nav-item nav-link mr-1 rounded px-2' style={{backgroundColor : 'lightcyan'}} to='/' >خانه</Link>
+                    <Link className='nav-item nav-link mr-1 rounded px-2' style={{backgroundColor : 'lightcyan'}} to='/services' >خدمات</Link>
+                    <Link className='nav-item nav-link mr-1 rounded px-2' style={{backgroundColor : 'lightcyan'}} to='/' >درباره ما</Link>
                 </Nav>
-                <Nav className='mr-auto'>
+                <Nav className='mr-lg-auto'>
                     {signUpHandler()}
                 </Nav>
                 </Navbar.Collapse>
